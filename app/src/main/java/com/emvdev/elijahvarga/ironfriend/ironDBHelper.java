@@ -36,19 +36,19 @@ public class ironDBHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + personTable + " ("
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + personTable + " ("
                 + personID + " INTEGER PRIMARY KEY,"
                 + personName + " NOT NULL TEXT,"
                 + personNumber + " TEXT,"
                 + personBday + " TEXT )"
         );
-        db.execSQL("CREATE TABLE " + requestTable + " ("
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + requestTable + " ("
                 + requestid + " INTEGER PRIMARY KEY,"
                 + requestPid + " INTEGER FOREIGN KEY,"
                 + requestDesc + "TEXT NOT NULL,"
                 + requestDate + "TEXT )"
         );
-        db.execSQL("CREATE TABLE " + answerTable + " ("
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + answerTable + " ("
                 + answerid + " INTEGER PRIMARY KEY,"
                 + answerRid + " INTEGER FOREIGN KEY,"
                 + answerDesc + "TEXT NOT NULL,"

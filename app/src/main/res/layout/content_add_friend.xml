@@ -36,7 +36,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/personName"
         android:layout_toRightOf="@+id/imageView"
         android:layout_toEndOf="@+id/imageView"
         android:layout_below="@+id/button" />
@@ -46,11 +46,10 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
+        android:id="@+id/personNumber"
+        android:layout_below="@+id/personName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:phoneNumber="false"
         android:text="@string/phoneNum" />
 
     <EditText
@@ -58,8 +57,8 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/editText2"
+        android:id="@+id/personBday"
+        android:layout_below="@+id/personNumber"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:text="@string/birthday" />
@@ -68,7 +67,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/finishButton"
-        android:id="@+id/button2"
+        android:id="@+id/finishButton"
+        android:onClick="finishFriend"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="150dp" />
